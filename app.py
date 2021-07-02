@@ -34,7 +34,7 @@ def connect():
 
     try:
         if len(location) > 0:
-            req = requests.get(location)
+            req = requests.get(location, timeout=3)
             req.raise_for_status()
             if req.headers.get('Content-Type') == 'application/json':
                 r = req.json()
@@ -46,5 +46,7 @@ def connect():
         r = {'ERROR': "HTTP Url is not active"}
     except requests.exceptions.ConnectionError as err:
         r = {'ERROR': 'Connection error'}
+    except:
+        r = {'ERROR': 'Unknown error'}
 
     return render_template('connect.html', results=r, location=location)
