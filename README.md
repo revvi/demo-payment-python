@@ -48,3 +48,11 @@ sudo service docker start
 # <dockerimage> is using USER/REPO:TAG based in docker hub image format
 docker run -d -p 80:5000 --name python-docker <dockerimage>
 ```
+
+Docker in Server
+```
+docker kill demo-payment-python
+docker rm demo-payment-python
+docker rmi revvi/demo-payment-python:latest
+docker run -d -p 80:5000 --name demo-payment-python revvi/demo-payment-python:latest
+```
