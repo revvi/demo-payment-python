@@ -2,34 +2,50 @@
 <html>
 
 <head>
-    <title>Dummy Payment Gateway</title>
+  <title>Dummy Payment Gateway</title>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1 {
+      color: #A44;
+    }
+
+    h2 {
+      color: #522;
+    }
+
+    p {
+      color: black;
+    }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1>Connect to Consumer</h1>
+  <h1>Connect to Consumer</h1>
 
-    <form action="" method="post">
-        <p>
-            <label for="location">Location</label>
-            <input type="text" name="location" size="80" value="{{ location }}">
-        </p>
-        <p>
-            <input type="submit">
-        </p>
-    </form>
-
-    <p>URL: <br /><code>{{ location }}</code></p>
+  <form action="" method="post">
     <p>
-        results:<br />
-        <code>{{ results }}</code>
+      <label for="location">Location</label>
+      <input type="text" name="location" size="80" value="{{ location }}">
     </p>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-        a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-        Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.</p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <p>URL: <br /><code>{{ location }}</code></p>
+  <p>
+    results:<br />
+    <code>{{ results }}</code>
+  </p>
+  <p>Connect to API Consumer</p>
 
 </body>
 
